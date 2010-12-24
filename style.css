@@ -11,8 +11,15 @@
 
 @font-face {
   font-family: "Lucida Grande Bold";  
+  font-weight: bold;
   src: local("Lucida Grande Bold"), url("lg_b.ttf");
 }
+
+h1,h2,h3,strong {
+  font-family: "Lucida Grande Bold";
+}
+
+a { color: black; }
 
 html, body {
   margin: 0;
@@ -118,4 +125,64 @@ div.content  {
     padding-left: 60px;
     line-height: 48px;
     margin-right: 0;
+}
+
+.work_history {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.work_history .subor {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.work_history .work {
+    margin-top: 2em;
+}
+
+.work_history .work .text {
+    margin-top: 0.5em;
+}
+
+.projects { margin-top: 4em; }
+
+.projects h2 { font-size: 2em; }
+
+.project h3 { font-size: 1.5em; }
+.project .small {
+    margin-top: 0.5em;
+}
+
+.projects .project {
+    margin-top: 4em;
+}
+
+.project .images {
+    margin-top: 1em;
+    width: 979px;
+}
+
+.project .text {
+    margin-top: 2em;
+    font-size: 1.3em;
+}
+
+.project .text p {
+    margin-top: 1.5em;
+}
+
+.project .stats {
+    list-style: none;
+    padding-left: 2em;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+}
+
+.footer {
+    margin-top: 4em;
+    font-size: 1.3em;
+
+    padding-bottom: 3em;
 }
