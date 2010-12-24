@@ -4,21 +4,6 @@
     border: 0;
 }
 
-@font-face {
-  font-family: "Lucida Grande";  
-  src: url("lg.ttf");
-}
-
-@font-face {
-  font-family: "Lucida Grande Bold";  
-  font-weight: bold;
-  src: local("Lucida Grande Bold"), url("lg_b.ttf");
-}
-
-h1,h2,h3,strong {
-  font-family: "Lucida Grande Bold";
-}
-
 a { color: black; }
 
 html, body {
@@ -28,7 +13,7 @@ html, body {
   height: 100%;
 
   font-size: 1em; 
-  font-family: "Lucida Grande";
+  font-family: "PT Sans";
 }
 
 div.wrapper  {
@@ -65,7 +50,7 @@ div.content  {
 .keywords {
     margin-top: 1.7em;
     color: #555;
-    font-size: 0.9em;    
+    font-size: 0.87em;    
 }
 
 .role {
@@ -78,7 +63,7 @@ div.content  {
 }
 
 .about {
-    margin-top: 1em;
+    margin-top: 1.9em;
     font-size: 1.7em;
     color: #111;
 }
