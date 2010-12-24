@@ -1,0 +1,121 @@
+* {
+    margin:0;
+    padding:0;
+    border: 0;
+}
+
+@font-face {
+  font-family: "Lucida Grande";  
+  src: url("lg.ttf");
+}
+
+@font-face {
+  font-family: "Lucida Grande Bold";  
+  src: local("Lucida Grande Bold"), url("lg_b.ttf");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;  
+  height: 100%;
+
+  font-size: 1em; 
+  font-family: "Lucida Grande";
+}
+
+div.wrapper  {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+}
+
+div.content  {
+  text-align: left;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  margin-top: 1em;
+}
+
+.me {
+    float: left;
+    margin: 1.5em;
+    margin-top: 0.6em;
+    margin-left: 0;
+    width: 400px;
+    height: 267px;
+
+    background: url(images/me.jpg);
+}
+
+.name {
+    font-size: 3em;
+}
+
+.keywords {
+    margin-top: 1.7em;
+    color: #555;
+    font-size: 0.9em;    
+}
+
+.role {
+    font-size: 1em;
+}
+
+.keywords span {
+    margin-right: 0.5em;
+    white-space: nowrap;
+}
+
+.about {
+    margin-top: 1em;
+    font-size: 1.7em;
+    color: #111;
+}
+
+.about {
+    line-height: 1.4em;
+}
+
+.social_networks {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.social_networks li {
+    display: inline-block;
+    margin-right: 111px;
+}
+
+.social_networks li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.social_networks li a:hover {
+    text-decoration: underline;
+}
+
+.social_networks .skype {
+    background: url(images/skype.png) top left no-repeat;
+    padding-left: 60px;
+    line-height: 48px;
+}
+
+.social_networks .gmail {
+    background: url(images/gmail.png) top left no-repeat;    
+    padding-left: 60px;
+    line-height: 64px;
+}
+
+
+.social_networks .facebook {
+    background: url(images/facebook.png) top left no-repeat;    
+    padding-left: 60px;
+    line-height: 48px;
+    margin-right: 0;
+}
