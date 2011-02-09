@@ -71,8 +71,8 @@
     <div class="project">
         <h3>AIS Hydra, 2007-2010, <a href="http://latera.ru" target="_blank">Latera software</a></h3>
         <p class="small">«Гидра» — автоматизированная система расчётов за услуги связи для небольших и средних операторов.</p>
-        <div class="images slider">
-            <img src="images/hydra_1.png"/>
+        <div class="images slider" id="slider_1">
+            <img src="images/hydra_1.png" onload="setTimeout(function(){$('#slider_1').nivoSlider();}, 1000)"/>
             <img src="images/hydra_2.png"/>
             <img src="images/hydra_3.png"/>
             <img src="images/hydra_4.png"/>
@@ -105,8 +105,8 @@
     <div class="project">
         <h3><a href="https://chrome.google.com/extensions/detail/bbncpldmanoknoahidbgmkgobgmhnafh">Chromus</a> (ex. Last.fm free music player), 2010 - сейчас</h3>
         <p class="small">Музыкальный плеер для Web-браузера</p>
-        <div class="images slider">
-            <img src="images/chromus_1.png" />
+        <div class="images slider" id="slider_2">
+            <img src="images/chromus_1.png" onload="setTimeout(function(){$('#slider_2').nivoSlider();}, 1000)"/>
             <img src="images/chromus_2.png" />
         </div>
         <div class="keywords">
@@ -135,8 +135,8 @@
     <div class="project">
         <h3><a href="http://pointoutapp.appspot.com">PointOut</a>, 2010 - сейчас</h3>
         <p class="small">Совместное обсуждение изображений</p>
-        <div class="images slider" style="width:931px">
-            <img src="images/pointout_1.png" />
+        <div class="images slider" style="width:931px" id="slider_3">
+            <img src="images/pointout_1.png" onload="setTimeout(function(){$('#slider_3').nivoSlider();}, 1000)"/>
             <img src="images/pointout_2.png" />
             <img src="images/pointout_3.png" />
             <img src="images/pointout_4.png" />
@@ -157,3 +157,6 @@
 </div>
 <div class="footer">
 </div>
+<script>
+document.title = "Леонид Бугаев";
+</script>
