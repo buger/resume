@@ -171,3 +171,10 @@ div.content  {
 
     padding-bottom: 3em;
 }
+
+#change-language {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 1em;
+}

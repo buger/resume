@@ -15,63 +15,30 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="content">                
-                <div class="me"></div>
-                <div class="name">Леонид Бугаев</div>
-                <div class="short">
-                    <p class="role">
-                        Веб-Разработка, проектирование интерфейсов, управление проектами
-                    </p>
-                    <p class="keywords" style="margin-top: 4em">
-                        <span style="font-size: 2em">Javascript</span>
-                        <span style="font-size: 1em">JQuery</span>
-                        <span style="font-size: 1em; margin-right: 1em">Prototype</span>
-                        <span style="font-size: 2em">HTML5</span>
-                        <span style="font-size: 2em">CSS3</span>
-                        <span style="font-size: 2em">Python</span>
-                        <span style="font-size: 1em">Google App Engine</span>
-                        <span style="font-size: 2em">Ruby</span>
-                        <span style="font-size: 1em">RubyOnRails</span>
-                        <span style="font-size: 1em; margin-right: 1em">Sinatra</span>
-                        <span style="font-size: 2em">Testing</span>
-                        <span style="font-size: 1em">Cucumber</span>
-                        <span style="font-size: 1em">RSpec</span>
-                        <span style="font-size: 1em; margin-right: 1em">Selenium</span>
-                        <span style="font-size: 2em">SQL</span>
-                        <span style="font-size: 1em">Oracle</span>
-                        <span style="font-size: 1em">MySql</span>
-                        <span style="font-size: 2em">Browser Extensions</span>
-                        <span style="font-size: 1em">Chrome</span>
-                        <span style="font-size: 1em">Firefox</span>
-                        <span style="font-size: 1em">Safari</span>
-                        <span style="font-size: 1em; margin-right: 1em">Opera</span>
-                        <span style="font-size: 2em;margin-right: 1em">UI Design</span>
-                        <span style="font-size: 2em">API</span>
-                        <span style="font-size: 1em">Facebook</span>
-                        <span style="font-size: 1em">Google</span>
-                        <span style="font-size: 1em">Yahoo</span>
-                    </p>
-                </div>
-                <div class="about">
-                    <p>Специализируюсь на проектировании и разработке систем со сложной логикой и интерфейсом, с учетом современных тендеций в дизайне и технологии.</p> 
-                    <p style="margin-top: 1em">Живу в Санкт-Петербурге, радуюсь жизни, смеюсь, люблю, воплощаю свои (и ваши) идеи в жизнь.</p>
-                    <p style="margin-top: 1em">На данный момент независимый разработчик, чему очень рад :)</p>                    
-                </div>
-                <ul class="social_networks">
-                    <li class="gmail"><a href="mailto:leonsbox@gmail.com">leonsbox@gmail.com</a></li>
-                    <li class="skype"><a href="skype:leonid.bugaev">leonid.bugaev</a></li>
-                    <li class="facebook"><a target="_blank" href="http://www.facebook.com/leonid.bugaev">leonid.bugaev</a></li>
-                </ul>
-                <div id="content_for_load"></div>
+            <div class="content" id="content_for_load">
             </div> 
         </div> 
         <script type="text/javascript">
-            $(window).load(function() {
-                $.get('content_for_load.html', function(data){
+            function setLanguage(lang) {
+                if (!lang) {
+                    if (document.location.hash == '#en' || document.location.hash == '#ru') {
+                        lang = document.location.hash.substr(1);
+                    } else {
+                        lang = navigator.language;
+                    }
+                }
+                
+                template = lang !== 'ru' ? "content_for_load_en.html" : "content_for_load.html";
+
+                $.get(template, function(data){
                     $('#content_for_load').html(data);
                     
                     $('.images.slider').nivoSlider();
                 });
+            }
+
+            $(window).load(function() {
+                setLanguage();
             });
         </script>
         <!-- Yandex.Metrika counter -->
