@@ -27,6 +27,8 @@
                         lang = navigator.language;
                     }
                 }
+
+                lang = 'en';
                 
                 template = lang !== 'ru' ? "content_for_load_en.html" : "content_for_load.html";
 
@@ -37,6 +39,51 @@
 
             $(window).load(function() {
                 setLanguage();
+            });
+
+            $('.toggle_full_info').live('click', function(){
+                if ($(this).hasClass('toggled')) {                    
+                    $('.about-me .full').animate({ 'margin-top': '0px' });
+                    
+                    $(this).find('p').animate({ opacity: 1 });
+                    
+                    $('#content_for_load').css({ height: '100%' });
+
+                    $(this).find('.shadow').css({ 'top': '-1px' })
+                        .animate({ opacity: 1 }); 
+                    
+                    $('.small_info').animate({ 'opacity': 0 });
+
+                    $(this).animate({
+                        height: '120px'
+                      }, 500, function(){
+                        
+                        $('.work_container').hide();
+                      }
+                    );
+                } else {
+                    console.log(this);
+
+                    $('.work_container').show();
+                    
+                    $('.about-me .full').animate({ 'margin-top': '-490px' });
+                    
+                    $(this).find('.shadow').css({ opacity: 0 });
+
+                    $(this).find('p').animate({ opacity: 0 });
+                    
+                    $('#content_for_load').css({ height: 'auto' });
+
+                    $(this).animate({
+                        height: '80px'
+                      }, 500, function(){
+                        $(this).find('.shadow').css({ 'top': '79px' }).animate({ 'opacity': 1 }, 200);
+                        $('.small_info').animate({ 'opacity': 1 });
+                      }
+                    );
+                }
+                
+                $(this).toggleClass('toggled');
             });
         </script>
         <!-- Yandex.Metrika counter -->
